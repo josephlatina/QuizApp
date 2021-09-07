@@ -9,7 +9,6 @@ function WelcomeScreen() {
 
     return (
       <ImageBackground 
-          blurRadius={2}
           style={styles.background}
           source={require("../assets/background.png")} 
       >
