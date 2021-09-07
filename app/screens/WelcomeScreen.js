@@ -1,5 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, Image } from "react-native";
+import { StyleSheet, Text, View, ImageBackground, Image, Button } from "react-native";
+
+import AppButton from '../components/AppButton';
 
 function WelcomeScreen() {
 
@@ -10,7 +12,7 @@ function WelcomeScreen() {
           source={require("../assets/background.jpg")} 
       >
         <View style={styles.logoContainer}>
-            <Text style={styles.tagline}>Sell What You Don't Need</Text>
+            <Text style={styles.tagline}>Quiz Time!</Text>
         </View>
         <View style={styles.buttonsContainer}>
           <AppButton 
@@ -34,7 +36,8 @@ function WelcomeScreen() {
       padding: 20,
       width: "100%",
       justifyContent: "center",
-      alignItems: "center"
+      alignItems: "center",
+      top: -100
     },
     logo: {
       width: 100,
