@@ -1,7 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View, ImageBackground, Image, Button } from "react-native";
+import AnimatedLottieView from 'lottie-react-native';
 
 import AppButton from '../components/AppButton';
+import WelcomeAnimation from '../components/WelcomeAnimation';
 
 function WelcomeScreen() {
 
@@ -9,11 +11,12 @@ function WelcomeScreen() {
       <ImageBackground 
           blurRadius={2}
           style={styles.background}
-          source={require("../assets/background.jpg")} 
+          source={require("../assets/background.png")} 
       >
-        <View style={styles.logoContainer}>
-            <Text style={styles.tagline}>Quiz Time!</Text>
-        </View>
+        <WelcomeAnimation 
+          style={{position: 'absolute', top: -50}}
+          visible={true}
+        />
         <View style={styles.buttonsContainer}>
           <AppButton 
             title="Play"
@@ -45,7 +48,7 @@ function WelcomeScreen() {
     },
     logoContainer: {
       position: 'absolute',
-      top: 70,
+      top: 50,
       alignItems: "center",
     },
     tagline: {
