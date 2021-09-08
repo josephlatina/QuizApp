@@ -1,6 +1,8 @@
 import React from 'react';
-import Constants from 'expo-constants';
-import { StyleSheet, SafeAreaView, View, ImageBackground } from 'react-native';
+import { StyleSheet, ImageBackground, Image, View } from 'react-native';
+
+import AppButton from './AppButton';
+import Screen from './Screen';
 
 function QuestionScreen({ children, style }) {
     return (
@@ -8,9 +10,18 @@ function QuestionScreen({ children, style }) {
             style={styles.background}
             source={require("../assets/background.png")}
         >
-            <SafeAreaView style={[styles.screen, style]}>
-                <View style={[styles.view, style]}>{children}</View>
-            </SafeAreaView>
+            <View 
+                style={styles.questionBox}
+            >
+                <Image 
+                    style={styles.image}
+                    resizeMode= 'contain'
+                    source={require("../assets/questionBox.png")}
+                />
+            </View>
+            <View style={styles.buttonContainer}>
+                <AppButton title='Submit'/>
+            </View>
         </ImageBackground>
     )
 }
@@ -21,12 +32,30 @@ const styles = StyleSheet.create({
         justifyContent: "flex-end",
         alignItems: "center",
     },
-    screen: {
-        paddingTop: Constants.statusBarHeight, //ensures that there is enough padding at the top of the screen so the status bar does not cover screen contents
+    image: {
         flex: 1,
     },
-    view: {
-        flex: 1,
+    questionBox: {
+        width: '85%',
+        height: 500,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'white',
+        borderRadius: 30,
+        shadowColor: 'grey',
+        shadowOpacity: 0.5,
+        elevation: 20,
+        position: 'absolute',
+        top: 100,
+        overflow: 'hidden'
+        
+    },
+    buttonContainer: {
+        position: 'absolute',
+        width: '85%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        top: 640
     }
 })
 
