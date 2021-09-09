@@ -1,10 +1,11 @@
+import { CardAnimationContext } from '@react-navigation/stack';
 import React from 'react';
-import { StyleSheet, ImageBackground, Image, View } from 'react-native';
+import { StyleSheet, ImageBackground, Image, View, FlatList } from 'react-native';
 
 import AppButton from './AppButton';
 import Screen from './Screen';
 
-function QuestionScreen({ children, style }) {
+function QuestionScreen({ children, style, options }) {
     return (
         <ImageBackground
             style={styles.background}
@@ -17,7 +18,15 @@ function QuestionScreen({ children, style }) {
                     style={styles.image}
                     resizeMode= 'contain'
                     source={require("../assets/questionBox.png")}
-                />
+                >
+                    <FlatList 
+                        data={options}
+                        keyExtractor={option => option.id.toString()}
+                        renderItem={({ item }) =>
+                            <Card />
+                        }
+                    />
+                </Image>
             </View>
             <View style={styles.buttonContainer}>
                 <AppButton title='Submit'/>
