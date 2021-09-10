@@ -23,6 +23,13 @@ const options = [
     },
 ]
 
+const [result, setResult] = useState(0);
+
+const handlePress = () => {
+    if (id==2) 
+        setResult(result++)
+}
+
 function Question1({navigation}) {
 
 return (
@@ -30,7 +37,8 @@ return (
         options = {options}
         title = 'Question 1'
         subtitle = 'When was the first release of the Apple Watch?'
-        onPress={() => navigation.navigate(routes.QUESTION2)}
+        onPress={() => navigation.navigate(routes.QUESTION2, result)}
+        optionOnPress={handlePress}
     />
 )
 }

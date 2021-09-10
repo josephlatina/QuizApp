@@ -25,7 +25,7 @@ import Screen from './Screen';
 //     },
 // ]
 
-function QuestionScreen({ options, onPress, title, subtitle }) {
+function QuestionScreen({ options, onPress, optionOnPress, title, subtitle }) {
     return (
         <ImageBackground
             style={styles.background}
@@ -47,7 +47,7 @@ function QuestionScreen({ options, onPress, title, subtitle }) {
                             renderItem={({ item }) =>
                                 <Card 
                                     text={item.text}
-                                    onPress={() => console.log(item)}
+                                    onPress={optionOnPress}
                                 />
                             }
                         />
