@@ -4,10 +4,11 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import QuestionScreen from './app/components/QuestionScreen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
+import Question1 from './app/screens/Question1';
 
 export default function App() {
   return (
-    <QuestionScreen />
+    <Question1 />
   );
 }
 

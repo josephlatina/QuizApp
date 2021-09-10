@@ -6,26 +6,26 @@ import AppButton from './AppButton';
 import Card from './Card';
 import Screen from './Screen';
 
-const options = [
-    {
-        id: 1,
-        text: 'Option1'
-    },
-    {
-        id: 2,
-        text: 'Option2'
-    },
-    {
-        id: 3,
-        text: 'Option3'
-    },
-    {
-        id: 4,
-        text: 'Option4'
-    },
-]
+// const options = [
+//     {
+//         id: 1,
+//         text: 'Option1'
+//     },
+//     {
+//         id: 2,
+//         text: 'Option2'
+//     },
+//     {
+//         id: 3,
+//         text: 'Option3'
+//     },
+//     {
+//         id: 4,
+//         text: 'Option4'
+//     },
+// ]
 
-function QuestionScreen({ children, style }) {
+function QuestionScreen({ children, style, options }) {
     return (
         <ImageBackground
             style={styles.background}
