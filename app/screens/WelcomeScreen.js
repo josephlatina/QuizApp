@@ -4,8 +4,9 @@ import AnimatedLottieView from 'lottie-react-native';
 
 import AppButton from '../components/AppButton';
 import WelcomeAnimation from '../components/WelcomeAnimation';
+import routes from '../navigation/routes';
 
-function WelcomeScreen() {
+function WelcomeScreen({navigation}) {
 
     return (
       <ImageBackground 
@@ -19,7 +20,7 @@ function WelcomeScreen() {
         <View style={styles.buttonsContainer}>
           <AppButton 
             title="Play"
-            //onPress={() => navigation.navigate("Login")}
+            onPress={() => navigation.navigate(routes.QUESTION1)}
           />
         </View>
       </ImageBackground>

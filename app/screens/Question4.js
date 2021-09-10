@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import QuestionScreen from '../components/QuestionScreen';
+import routes from '../navigation/routes';
 
 const options = [
     {
@@ -27,6 +28,8 @@ function Question4() {
 return (
     <QuestionScreen 
         options = {options}
+        title = 'Question 4'
+        onPress={() => navigation.navigate(routes.QUESTION5)}
     />
 )
 }

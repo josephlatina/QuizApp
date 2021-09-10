@@ -1,7 +1,9 @@
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import QuestionScreen from '../components/QuestionScreen';
+import routes from '../navigation/routes';
 
 const options = [
     {
@@ -22,11 +24,14 @@ const options = [
     },
 ]
 
-function Question1() {
+function Question1({navigation}) {
 
 return (
     <QuestionScreen 
         options = {options}
+        title = 'Question 1'
+        subtitle = 'When was the first release of the Apple Watch?'
+        onPress={() => navigation.navigate(routes.QUESTION2)}
     />
 )
 }

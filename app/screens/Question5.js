@@ -27,6 +27,7 @@ function Question5() {
 return (
     <QuestionScreen 
         options = {options}
+        title = 'Question 5'
     />
 )
 }

@@ -25,7 +25,7 @@ import Screen from './Screen';
 //     },
 // ]
 
-function QuestionScreen({ children, style, options }) {
+function QuestionScreen({ options, onPress, title, subtitle }) {
     return (
         <ImageBackground
             style={styles.background}
@@ -38,7 +38,8 @@ function QuestionScreen({ children, style, options }) {
                     style={styles.image}
                     source={require("../assets/questionBox.png")}
                 >
-                    <Text style={styles.question}>Question 1</Text>
+                    <Text style={styles.title}>{title}</Text>
+                    <Text style={styles.subtitle}>{subtitle}</Text>
                     <View style={styles.optionsContainer}>
                         <FlatList 
                             data={options}
@@ -46,7 +47,7 @@ function QuestionScreen({ children, style, options }) {
                             renderItem={({ item }) =>
                                 <Card 
                                     text={item.text}
-                                    onPress={() => console.log("Option Selected", item)}
+                                    onPress={() => console.log(item)}
                                 />
                             }
                         />
@@ -54,7 +55,7 @@ function QuestionScreen({ children, style, options }) {
                 </ImageBackground>
             </View>
             <View style={styles.buttonContainer}>
-                <AppButton title='Submit'/>
+                <AppButton title='Submit' onPress={onPress}/>
             </View>
         </ImageBackground>
     )
@@ -87,12 +88,21 @@ const styles = StyleSheet.create({
         top: 100,
         overflow: 'hidden'
     },
-    question: {
+    title: {
         position: 'absolute',
-        top: 80,
-        fontSize: 20,
-        // textTransform: 'uppercase',
+        top: 60,
+        fontSize: 25,
+        textTransform: 'uppercase',
         fontWeight: 'bold',
+    },
+    subtitle: {
+        position: 'absolute',
+        top: 100,
+        fontSize: 17,
+        textTransform: 'uppercase',
+        textAlign: 'center',
+        fontWeight: 'bold',
+        padding: 15
     },
     optionsContainer: {
         padding: 20,
