@@ -16,26 +16,32 @@ const QuizNavigator = () => (
         <Stack.Screen 
             name={routes.WELCOME}
             component={WelcomeScreen}
+            options={{headerShown: false}}
         />
         <Stack.Screen 
             name={routes.QUESTION1}
             component={Question1}
+            options={{headerShown: false}}
         />
         <Stack.Screen 
             name={routes.QUESTION2}
             component={Question2}
+            options={{headerShown: false}}
         />
         <Stack.Screen 
             name={routes.QUESTION3}
             component={Question3}
+            options={{headerShown: false}}
         />
         <Stack.Screen 
             name={routes.QUESTION4}
             component={Question4}
+            options={{headerShown: false}}
         />
         <Stack.Screen 
             name={routes.QUESTION5}
             component={Question5}
+            options={{headerShown: false}}
         />
     </Stack.Navigator>
 )

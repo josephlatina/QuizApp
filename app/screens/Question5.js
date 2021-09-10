@@ -22,7 +22,7 @@ const options = [
     },
 ]
 
-function Question5() {
+function Question5({navigation}) {
 
 return (
     <QuestionScreen 
