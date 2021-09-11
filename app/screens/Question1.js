@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import QuestionScreen from '../components/QuestionScreen';
@@ -23,25 +23,24 @@ const options = [
     },
 ]
 
-const [result, setResult] = useState(0);
-
-const handlePress = () => {
-    if (id==2) 
-        setResult(result++)
-}
-
 function Question1({navigation}) {
+    const [result, setResult] = useState(0);
 
-return (
-    <QuestionScreen 
-        options = {options}
-        title = 'Question 1'
-        subtitle = 'When was the first release of the Apple Watch?'
-        onPress={() => navigation.navigate(routes.QUESTION2, result)}
-        optionOnPress={handlePress}
-    />
-)
-}
+    const handlePress = (id) => {
+        if (id === 2) 
+            setResult(result+1)
+    }
+
+    return (
+        <QuestionScreen 
+            options = {options}
+            title = 'Question 1'
+            subtitle = 'When was the first release of the Apple Watch?'
+            onPress={() => navigation.navigate(routes.QUESTION2, result)}
+            optionOnPress={handlePress}
+        />
+    )
+    }
 
 const styles = StyleSheet.create({
     

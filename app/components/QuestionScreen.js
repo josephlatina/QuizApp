@@ -47,7 +47,7 @@ function QuestionScreen({ options, onPress, optionOnPress, title, subtitle }) {
                             renderItem={({ item }) =>
                                 <Card 
                                     text={item.text}
-                                    onPress={optionOnPress}
+                                    onPress={() => optionOnPress(item.id)}
                                 />
                             }
                         />
