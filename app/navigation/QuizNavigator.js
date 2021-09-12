@@ -26,7 +26,7 @@ const QuizNavigator = () => (
         <Stack.Screen 
             name={routes.QUESTION2}
             component={Question2}
-            // options={{headerShown: false}}
+            options={{headerShown: false}}
         />
         <Stack.Screen 
             name={routes.QUESTION3}

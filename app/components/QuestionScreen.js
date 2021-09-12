@@ -2,9 +2,7 @@ import { CardAnimationContext } from '@react-navigation/stack';
 import React from 'react';
 import { StyleSheet, ImageBackground, View, FlatList, Text } from 'react-native';
 
-import AppButton from './AppButton';
 import Card from './Card';
-import Screen from './Screen';
 
 // const options = [
 //     {
@@ -53,9 +51,6 @@ function QuestionScreen({ options, onPress, optionOnPress, title, subtitle }) {
                         />
                     </View>
                 </ImageBackground>
-            </View>
-            <View style={styles.buttonContainer}>
-                <AppButton title='Submit' onPress={onPress}/>
             </View>
         </ImageBackground>
     )
