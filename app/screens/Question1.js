@@ -9,19 +9,19 @@ import routes from '../navigation/routes';
 const options = [
     {
         id: 1,
-        text: 'Option1'
+        text: 'None'
     },
     {
         id: 2,
-        text: 'Option2'
+        text: '4'
     },
     {
         id: 3,
-        text: 'Option3'
+        text: '5'
     },
     {
         id: 4,
-        text: 'Option4'
+        text: '7'
     },
 ]
 
@@ -33,7 +33,7 @@ function Question1({navigation}) {
 
     const handlePress = (id) => {
         setVisible(false);
-        if (id === 2) {
+        if (id === 3) {
             setResult(result+1)
             setCorrect(true);
         }
@@ -46,7 +46,7 @@ function Question1({navigation}) {
             {visible && <QuestionScreen 
                 options = {options}
                 title = 'Question 1'
-                subtitle = 'When was the first release of the Apple Watch?'
+                subtitle = 'How many rings are on the Olympic Flag'
                 onPress={() => navigation.navigate(routes.QUESTION2, result)}
                 optionOnPress={handlePress}
             />}
