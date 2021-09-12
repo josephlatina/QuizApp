@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     },
     questionBox: {
         width: '85%',
-        height: 500,
+        height: 600,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'white',
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.5,
         elevation: 20,
         position: 'absolute',
-        top: 100,
+        top: 120,
         overflow: 'hidden'
     },
     title: {

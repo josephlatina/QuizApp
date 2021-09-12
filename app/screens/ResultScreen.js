@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     },
     animationContainer: {
         position: 'absolute',
-        top: -150
+        top: -100
     },
     messageContainer: {
         fontSize: 25,
@@ -63,11 +63,11 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         padding: 15,
         position: 'absolute',
-        top: 400
+        top: 430
     },
     buttonContainer: {
         position: 'absolute',
-        top: 600,
+        top: 700,
         width: '85%',
         justifyContent: 'center',
         alignItems: 'center',

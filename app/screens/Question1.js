@@ -53,7 +53,7 @@ function Question1({navigation}) {
             { correct && 
                 <View style={styles.container} >
                     <LottieView 
-                        style = {{flex: 1, position: 'absolute', left: 50, backgroundColor: '#ffbc14'}}
+                        style = {{flex: 1, position: 'absolute', left: 40, backgroundColor: '#ffbc14'}}
                         autoPlay
                         loop = {false}
                         source={require('../assets/animations/checkmark.json')}
@@ -64,7 +64,7 @@ function Question1({navigation}) {
             { incorrect && 
                 <View style={styles.container}>
                     <LottieView 
-                        style = {{flex: 1, height: '100%', width: '100%', backgroundColor: '#ffbc14'}}
+                        style = {{flex: 1, height: '80%', width: '80%', backgroundColor: '#ffbc14'}}
                         autoPlay
                         loop = {false}
                         speed = {2}
