@@ -45,7 +45,7 @@ function Question1({navigation, route}) {
         <>
             {visible && <QuestionScreen 
                 options = {options}
-                title = 'Question 1'
+                title = 'Question 5'
                 subtitle = 'How many holes are on a standard bowling ball?'
                 onPress={() => navigation.navigate(routes.RESULT, result)}
                 optionOnPress={handlePress}

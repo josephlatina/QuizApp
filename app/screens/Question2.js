@@ -45,7 +45,7 @@ function Question1({navigation, route}) {
         <>
             {visible && <QuestionScreen 
                 options = {options}
-                title = 'Question 1'
+                title = 'Question 2'
                 subtitle = 'Which of these animals does NOT appear in the Chinese zodiac?'
                 onPress={() => navigation.navigate(routes.QUESTION3, result)}
                 optionOnPress={handlePress}

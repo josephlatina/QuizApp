@@ -40,7 +40,7 @@ function WelcomeScreen({navigation}) {
       width: "100%",
       justifyContent: "center",
       alignItems: "center",
-      top: -100
+      top: -80
     },
     logo: {
       width: 100,
