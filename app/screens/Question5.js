@@ -25,8 +25,8 @@ const options = [
     },
 ]
 
-function Question1({navigation}) {
-    const [result, setResult] = useState(0);
+function Question1({navigation, route}) {
+    const [result, setResult] = useState(route.params);
     const [correct, setCorrect] = useState(false);
     const [incorrect, setIncorrect] = useState(false);
     const [visible, setVisible] = useState(true);
@@ -47,7 +47,7 @@ function Question1({navigation}) {
                 options = {options}
                 title = 'Question 1'
                 subtitle = 'How many holes are on a standard bowling ball?'
-                onPress={() => navigation.navigate(routes.QUESTION2, result)}
+                onPress={() => navigation.navigate(routes.RESULT, result)}
                 optionOnPress={handlePress}
             />}
             { correct && 
@@ -57,7 +57,7 @@ function Question1({navigation}) {
                         autoPlay
                         loop = {false}
                         source={require('../assets/animations/checkmark.json')}
-                        onAnimationFinish = {() => navigation.navigate(routes.QUESTION2, result)}
+                        onAnimationFinish = {() => navigation.navigate(routes.RESULT, result)}
                     />
                 </View>
             }
@@ -69,7 +69,7 @@ function Question1({navigation}) {
                         loop = {false}
                         speed = {2}
                         source={require('../assets/animations/error.json')}
-                        onAnimationFinish = {() => navigation.navigate(routes.QUESTION2, result)}
+                        onAnimationFinish = {() => navigation.navigate(routes.RESULT, result)}
                     />
                 </View>
             }

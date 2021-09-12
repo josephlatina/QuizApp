@@ -8,6 +8,7 @@ import Question2 from '../screens/Question2';
 import Question3 from '../screens/Question3';
 import Question4 from '../screens/Question4';
 import Question5 from '../screens/Question5';
+import ResultScreen from '../screens/ResultScreen';
 
 const Stack = createStackNavigator();
 
@@ -41,6 +42,11 @@ const QuizNavigator = () => (
         <Stack.Screen 
             name={routes.QUESTION5}
             component={Question5}
+            options={{headerShown: false}}
+        />
+        <Stack.Screen 
+            name={routes.RESULT}
+            component={ResultScreen}
             options={{headerShown: false}}
         />
     </Stack.Navigator>

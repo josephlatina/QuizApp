@@ -25,8 +25,8 @@ const options = [
     },
 ]
 
-function Question1({navigation}) {
-    const [result, setResult] = useState(0);
+function Question1({navigation, route}) {
+    const [result, setResult] = useState(route.params);
     const [correct, setCorrect] = useState(false);
     const [incorrect, setIncorrect] = useState(false);
     const [visible, setVisible] = useState(true);

@@ -4,5 +4,6 @@ export default Object.freeze({
     QUESTION2: 'Question2',
     QUESTION3: 'Question3',
     QUESTION4: 'Question4',
-    QUESTION5: 'Question5'
+    QUESTION5: 'Question5',
+    RESULT: 'Result'
 });
